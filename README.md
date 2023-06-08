@@ -14,7 +14,7 @@ cd ..
 ## Start server
 ```
 cd cpserver
-python cpserver --connection_processing_sleep_time 0.2
+python cpserver.py --connection_processing_sleep_time 0.2
 ```
 
 ## Start client
