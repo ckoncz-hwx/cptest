@@ -1,0 +1,11 @@
+image: gitpod/workspace-python-3.9:2023-05-08-21-16-55
+tasks:
+  - name: Dependencies & Database
+    init: |
+      python3.9 -m venv venv
+      source venv/bin/activate
+      pip install -r requirements.txt
+      cd axios-test
+      npm i
+      cd ..
+    command: echo 'Done!'
