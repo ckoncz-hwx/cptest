@@ -1,6 +1,7 @@
-image: gitpod/workspace-python-3.9:2023-05-08-21-16-55
+image:
+  file: .gitpod.Dockerfile
 tasks:
-  - name: Dependencies & Database
+  - name: Preparation (Python and nodejs dependencies)
     init: |
       python3.9 -m venv venv
       source venv/bin/activate
