@@ -110,7 +110,7 @@ def wsgi_app(environ, start_response):
         if sleep_index < len(path_elements) + 2:
             sleep = path_elements[sleep_index + 1]
 
-    LOG.info(f'about to sleep {sleep} seconds')
+    LOG.info(f'[{path}] about to sleep {sleep} seconds')
     time.sleep(float(sleep))
     LOG.info('sleeping done')
 
@@ -118,7 +118,7 @@ def wsgi_app(environ, start_response):
     headers = [("Content-type", "text/plain; charset=utf-8")]  # HTTP Headers
     start_response(status, headers)
 
-    return [f'slept {sleep} seconds.'.encode('utf-8')]
+    return [f'[{path}] slept {sleep} seconds.'.encode('utf-8')]
 
 
 def start_server(options):
